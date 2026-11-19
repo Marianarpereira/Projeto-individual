@@ -3,79 +3,386 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AquaTech | Página Inicial</title>
-
-    <script src="./js/sessao.js"></script>
-
-    <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" type="image/png" href="./assets/icon/umbrella.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylel1.css">
+    <title>Resident Evil 4</title>
 </head>
 
 <body>
-    <div class="header">
-      <div class="container">
-        <h1 class="titulo">AquaTech</h1>
-        <ul class="navbar">
-          <li class="agora">
-            <a href="#">Inicial</a>
-          </li>
-          <li>
-            <a href="simulador.html">Simulador</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="login.html">Login</a>
-          </li>
-          <li>
-            <a href="cadastro.html">Cadastro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
-    <div class="banner">
-      <div class="container">
-        <p>Preservando <span>hoje</span> para existirem <span>amanhã</span>.</p>
-      </div>
-    </div>
-  
-    <div class="social">
-      <div class="container">
-        <div class="boxes">
-          <div class="box">
-            <img src="assets/imgs/planet-earth_color.png">
-            <h4>Missão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/lightbulb_color.png">
-            <h4>Visão</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
-          <div class="box">
-            <img src="assets/imgs/growth_color.png">
-            <h4>Valores</h4>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, quas cupiditate asperiores provident magnam
-              vitae illum iusto fugiat atque deleniti nulla sed iure suscipit, laborum, aliquid accusantium cum dicta
-              minima.</p>
-          </div>
+
+
+    <body>
+
+        <header class="header">
+            <section>
+
+                <a href="#inicio" class="brand">
+                    <img src="./assets/imgs/logo.png" alt="logo">
+                </a>
+
+                <nav class="nav">
+                    <a href="#history">História</a>
+                    <a href="#personagem">Personagens</a>
+                    <a href="#me">Sobre mim</a>
+                </nav>
+
+                <div class="nav-acesso">
+                    <a class="log" href="./login.html">Entrar</a>
+                    <a class="cad" href="./cadastro.html">Cadastre-se</a>
+                </div>
+            </section>
+
+        </header>
+
+        <div>
+            <section class="sectionHero" id="inicio">
         </div>
-      </div>
-    </div>
-  
-    <div class="footer">
-      <div class="container">
-        <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023-2026</h4>
-      </div>
-    </div>
-  </body>
+        </section>
+
+        <section class="Historia" id="history">
+
+            <img class="imagem-historia" src="https://i.pinimg.com/1200x/03/c8/d8/03c8d8cacc8718e5ec7c5e0c59206664.jpg">
+
+
+
+            <div class="historia-conteudo">
+                <h1>HISTÓRIA</h1>
+
+                <p>
+                    Lançado originalmente em 2005, Resident evil 4, é um jogo
+                    eletrônico de survival horror de tiro em terceira pessoa
+                    desenvolvido e publicado pela Capcom.
+                </p>
+
+                <p>
+                    O jogo acompanha Leon S. Kennedy em uma missão para resgatar Ashley Graham, filha do presidente dos
+                    Estados Unidos. Em uma região rural isolada da Espanha, a investigação revela uma ameaça muito maior
+                    do que parecia.
+                </p>
+
+            </div>
+        </section>
+
+
+        <main class="pagina-personagens" id="personagem">
+
+            <!-- BANNER DA PÁGINA -->
+            <section class="personagens-banner">
+
+                <div class="banner-conteudo">
+                    <h1>PERSONAGENS</h1>
+
+                    <p>
+                        As pessoas que dão rosto à memória
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- LISTA DE PERSONAGENS -->
+            <section class="personagens-lista">
+
+                <div class="personagens-grid">
+
+                    <!-- LEON -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/736x/3b/f7/5a/3bf75a329491220d6222564c87c43838.jpg"
+                            alt="Leon S. Kennedy">
+
+                        <div class="personagem-info">
+                            <h2>LEON S. KENNEDY</h2>
+
+                            <p>
+                                Ex-policial de Raccoon City que se tornou
+                                agente do governo americano.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- ASHLEY -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/736x/c5/bf/b6/c5bfb6dc2af5570e259f0ebf2a6a5e28.jpg"
+                            alt="Ashley Graham">
+
+                        <div class="personagem-info">
+                            <h2>ASHLEY GRAHAM</h2>
+
+                            <p>
+                                Filha do presidente dos Estados Unidos.
+
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ADA -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/1200x/81/f2/a7/81f2a7344db781c0ea9b07354a317a26.jpg"
+                            alt="Ada Wong">
+
+                        <div class="personagem-info">
+                            <h2>ADA WONG</h2>
+
+                            <p>
+                                Espiã habilidosa que trabalha em missões
+                                secretas envolvendo organizações
+                                bioterroristas.
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LUIS -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/1200x/a5/c5/5b/a5c55bf4530bcbe9ed1e229aad8bf0f0.jpg"
+                            alt="Luis Sera">
+
+                        <div class="personagem-info">
+                            <h2>LUIS SERA</h2>
+
+                            <p>
+                                Espanhol com um passado ligado à pesquisa
+                                das Plagas e aos acontecimentos da aldeia.
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- INGRID -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/736x/3b/cd/8a/3bcd8a392d336e82fe4ff3b4c9652967.jpg"
+                            alt="Ingrid Hunnigan">
+
+                        <div class="personagem-info">
+                            <h2>INGRID HUNNIGAN</h2>
+
+                            <p>
+                                Agente do governo americano responsável
+                                pela comunicação através do rádio com Leon.
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MERCADOR -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/1200x/42/b9/38/42b938bf22e53f69f6a632d1f45e5ff1.jpg"
+                            alt="O Mercador">
+
+                        <div class="personagem-info">
+                            <h2>O MERCADOR</h2>
+
+                            <p>
+                                Oferece armas, munições
+                                e equipamentos, além de aprimorar o arsenal
+                                de Leon durante sua jornada.
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- SADDLER -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/1200x/98/a9/92/98a992b4423ee79c13de75309c59d82b.jpg"
+                            alt="Osmund Saddler">
+
+                        <div class="personagem-info">
+                            <h2>OSMUND SADDLER</h2>
+
+                            <p>
+                                Líder religioso do culto Los Illuminados.
+
+                            </p>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- RAMON -->
+                    <article class="personagem-card">
+
+                        <img src="https://i.pinimg.com/736x/65/a6/c6/65a6c64d2fb517e454a4b133a14993fd.jpg"
+                            alt="Ramón Salazar">
+
+                        <div class="personagem-info">
+                            <h2>RAMÓN SALAZAR</h2>
+
+                            <p>
+                                Membro de uma antiga família nobre espanhola
+                                e responsável pelo castelo da região.
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BITORES MÉNDEZ -->
+                    <article class="personagem-card">
+                        <img src="https://i.pinimg.com/736x/1c/42/06/1c42064b75556be3a910f00af5258310.jpg"
+                            alt="Bitores Méndez">
+
+                        <div class="personagem-info">
+                            <h2>BITORES MÉNDEZ</h2>
+
+                            <p>
+                                Chefe da aldeia e um dos principais líderes de
+                                Los Illuminados.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </section>
+        </main>
+
+        <section class="territorios" id="territorios">
+
+            <!-- Cabeçalho da página -->
+            <div class="territorios-header">
+
+                <h1>TERRITÓRIOS</h1>
+
+                <p>
+                    Três territórios. Uma jornada marcada pelo medo.
+                </p>
+
+            </div>
+
+            <!-- Cards dos territórios -->
+            <div class="territorios-container">
+
+                <article class="territorio-card">
+                    <img src="https://i.pinimg.com/1200x/4f/7c/bf/4f7cbf11e9a8a4ba11b4a3b34c269d1f.jpg" alt="A aldeia">
+
+                    <div class="territorio-conteudo">
+
+                        <h2>A ALDEIA</h2>
+                        <p>
+                            O primeiro contato com a população local,
+                            onde a investigação de Leon revela a ameaça
+                            que domina a região.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="territorio-card">
+                    <img src="https://i.pinimg.com/1200x/1f/af/e5/1fafe51a10106a91703e93aed80d9485.jpg" alt="O castelo">
+
+                    <div class="territorio-conteudo">
+
+                        <h2>O CASTELO</h2>
+                        <p>
+                            Uma construção imponente, marcada por
+                            armadilhas, enigmas e os planos da família
+                            Salazar.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="territorio-card">
+                    <img src="https://i.pinimg.com/1200x/d1/d2/4d/d1d24d017943318cd14ec0f49fb09ae0.jpg" alt="A ilha">
+
+                    <div class="territorio-conteudo">
+
+                        <h2>A ILHA</h2>
+                        <p>
+                            Uma instalação militar que revela os
+                            experimentos por trás da ameaça e conduz
+                            Leon ao confronto final.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="sobre-mim" id="about">
+
+            <div class="sobre-conteudo" id="me">
+
+               
+                <div class="sobre-texto">
+
+                    <span class="sobre-detalhe">✦</span>
+
+                    <span class="sobre-subtitulo">
+                        SOBRE A CRIADORA
+                    </span>
+
+                    <h1>Por trás da memória</h1>
+
+                    <div class="sobre-divisor"></div>
+
+                    <p>
+                        Uma apresentação sobre quem está por trás
+                        deste projeto, minha relação com os jogos
+                        e o universo de Resident Evil.
+                    </p>
+
+                    <a href="conheca-me.html" class="sobre-botao">
+                        CONHEÇA-ME
+                    </a>
+
+                </div>
+
+                <!-- Fotografia -->
+                <div class="sobre-imagem">
+
+                    <img src="../public/assets/imgs/foto4.jpg" alt="Fotografia da criadora do projeto">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </body>
+
+
+</body>
+ <script src="./js/index.js"></script>
+
+
 
 </html>
