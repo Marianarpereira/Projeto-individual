@@ -1,0 +1,954 @@
+
+/* ==========================================
+   ÁREA LOGADA - COMUNIDADE
+========================================== */
+
+:root {
+    --bg: #050505;
+    --surface: #121212;
+    --surface2: #1b1b1b;
+    --line: #2a2a2a;
+    --ink: #f4f1ee;
+    --soft: #b9b4ae;
+    --red: #b2172a;
+    --gold: #c9963f;
+    --mute: #7d7872;
+}
+
+/* ==========================================
+   BARRA DE NAVEGAÇÃO PRINCIPAL
+========================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: #050505;
+    border-bottom: 1px solid var(--line);
+}
+
+.header section {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 5px 25px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.brand img {
+    width: 140px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
+
+.nav a {
+    padding: 8px 0;
+    transition: 0.3s;
+}
+
+.nav a:hover,
+.nav a.nav-ativo {
+    border-bottom: 2px solid var(--red);
+}
+
+.nav-acesso {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-acesso a {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.nav-acesso .cad {
+    background: var(--red);
+}
+
+.nav-acesso .log {
+    background: transparent;
+    color: #fff;
+}
+
+
+
+
+.layout-logado {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    min-height: 100vh;
+    padding-top: 65px;
+    background: var(--bg);
+}
+
+
+.side-nav {
+    position: sticky;
+    top: 65px;
+    height: calc(100vh - 65px);
+    background: var(--surface);
+    border-right: 1px solid var(--line);
+    padding: 30px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil-side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 5px 25px;
+    border-bottom: 1px solid var(--line);
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: var(--surface2);
+    border: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.perfil-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+}
+
+.perfil-info span {
+    color: var(--mute);
+    font-size: 13px;
+}
+
+.side-menu {
+    margin-top: 28px;
+}
+
+.side-titulo {
+    color: var(--gold);
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.15em;
+    font-size: 16px;
+    margin: 0 10px 15px;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 12px;
+    margin-bottom: 5px;
+    color: var(--soft);
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.08em;
+    border-left: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.side-link span {
+    font-family: Oswald, sans-serif;
+    font-size: 12px;
+    color: var(--mute);
+}
+
+.side-link:hover {
+    background: var(--surface2);
+    color: #fff;
+}
+
+.side-link.ativo {
+    background: var(--surface2);
+    color: #fff;
+    border-left-color: var(--red);
+}
+
+.side-link.ativo span {
+    color: var(--red);
+}
+
+.side-footer {
+    margin-top: auto;
+    border-top: 1px solid var(--line);
+    padding: 20px 8px 0;
+}
+
+.side-footer a {
+    color: var(--mute);
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    transition: 0.3s;
+}
+
+.side-footer a:hover {
+    color: var(--red);
+}
+
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.conteudo-logado {
+    min-width: 0;
+    width: 100%;
+
+}
+
+.pagina-comunidade {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 45px 40px 70px;
+}
+
+
+.titulo-comunidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--line);
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.eyebrow {
+    color: var(--red);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.18em;
+}
+
+.titulo-comunidade h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: var(--ink);
+    margin: 8px 0 12px;
+}
+
+.titulo-comunidade p {
+    color: var(--soft);
+    font-size: 17px;
+    margin: 0;
+}
+
+
+/* ==========================================
+   GRID DA COMUNIDADE
+========================================== */
+
+.comunidade-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 24px;
+    align-items: start;
+}
+
+.feed-comunidade,
+.painel-comunidade {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card-comunidade {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 22px;
+}
+
+.titulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.titulo-card h2 {
+    color: var(--gold);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    margin: 0;
+}
+
+.titulo-card > span {
+    color: var(--mute);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+}
+
+
+/* ==========================================
+   CRIAR PUBLICAÇÃO
+========================================== */
+
+.campo-publicacao {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+}
+
+.campo-publicacao textarea {
+    flex: 1;
+    min-width: 0;
+    min-height: 100px;
+    resize: vertical;
+    background: var(--surface2);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 13px;
+    color: var(--ink);
+    font-family: Oswald, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.campo-publicacao textarea:focus {
+    border-color: var(--red);
+}
+
+.campo-publicacao textarea::placeholder {
+    color: var(--mute);
+}
+
+.acoes-publicacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid var(--line);
+}
+
+.acoes-publicacao > span {
+    color: var(--mute);
+    font-size: 13px;
+}
+
+.btn-publicar {
+    background: var(--red);
+    border: 1px solid var(--red);
+    color: #fff;
+    padding: 9px 24px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-publicar:hover {
+    background: #8e1425;
+}
+
+
+/* ==========================================
+   FILTROS DO FEED
+========================================== */
+
+.feed-filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+}
+
+.feed-filtros h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0;
+}
+
+.feed-filtros > div {
+    display: flex;
+    gap: 12px;
+}
+
+.filtro {
+    background: transparent;
+    border: none;
+    color: var(--mute);
+    font-family: Oswald, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.filtro.ativo {
+    color: var(--gold);
+    border-bottom: 2px solid var(--red);
+}
+
+
+/* ==========================================
+   PUBLICAÇÕES
+========================================== */
+
+.usuario-publicacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.usuario-publicacao h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+}
+
+.usuario-publicacao span {
+    color: var(--mute);
+    font-size: 13px;
+}
+
+.opcoes {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    color: var(--mute);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.conteudo-publicacao h2 {
+    color: var(--ink);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    letter-spacing: 0.04em;
+    margin: 0 0 12px;
+}
+
+.conteudo-publicacao p {
+    color: var(--soft);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* ==========================================
+   TAGS
+========================================== */
+
+.tags-publicacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.tags-publicacao span {
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    padding: 3px 12px;
+    color: var(--soft);
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   INTERAÇÕES
+========================================== */
+
+.interacoes-publicacao {
+    display: flex;
+    gap: 22px;
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.interacoes-publicacao button {
+    background: transparent;
+    border: none;
+    color: var(--red);
+    font-family: Oswald, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.interacoes-publicacao button span {
+    color: var(--soft);
+    font-size: 14px;
+}
+
+.interacoes-publicacao button:hover span {
+    color: var(--gold);
+}
+
+
+/* ==========================================
+   COMENTÁRIOS
+========================================== */
+
+.comentarios-publicacao {
+    padding-top: 18px;
+}
+
+.comentarios-publicacao h4 {
+    color: var(--gold);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    margin: 0 0 18px;
+}
+
+.comentario {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.comentario h5 {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 4px;
+}
+
+.comentario p {
+    color: var(--soft);
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 5px;
+}
+
+.comentario span {
+    color: var(--mute);
+    font-size: 12px;
+}
+
+.campo-comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.campo-comentario input {
+    flex: 1;
+    min-width: 0;
+    background: var(--surface2);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 10px;
+    color: var(--ink);
+    font-family: Oswald, sans-serif;
+    outline: none;
+}
+
+.campo-comentario input:focus {
+    border-color: var(--red);
+}
+
+.campo-comentario input::placeholder {
+    color: var(--mute);
+}
+
+.campo-comentario button {
+    background: transparent;
+    border: 1px solid var(--red);
+    color: var(--red);
+    padding: 8px 15px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.campo-comentario button:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+
+/* ==========================================
+   RANKING
+========================================== */
+
+.membro-ranking {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.membro-ranking:last-child {
+    border-bottom: none;
+}
+
+.posicao {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    color: var(--mute);
+}
+
+.posicao.ouro {
+    color: var(--gold);
+}
+
+.posicao.prata {
+    color: #b9b4ae;
+}
+
+.posicao.bronze {
+    color: #a8662f;
+}
+
+.membro-info {
+    min-width: 0;
+}
+
+.membro-info h3 {
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.membro-info span {
+    color: var(--mute);
+    font-size: 12px;
+}
+
+.trofeu {
+    margin-left: auto;
+    color: var(--gold);
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   TÓPICOS POPULARES
+========================================== */
+
+.topico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--soft);
+    font-size: 14px;
+}
+
+.topico:last-child {
+    border-bottom: none;
+}
+
+.topico small {
+    color: var(--mute);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.topico span {
+    transition: 0.3s;
+}
+
+.topico:hover span {
+    color: var(--red);
+}
+
+
+/* ==========================================
+   CARD QUIZ
+========================================== */
+
+.card-quiz {
+    background:
+        radial-gradient(
+            ellipse at 100% 0,
+            rgba(201, 150, 63, 0.18),
+            transparent 65%
+        ),
+        var(--surface);
+}
+
+.card-quiz .eyebrow {
+    font-size: 14px;
+}
+
+.card-quiz h2 {
+    color: var(--ink);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.card-quiz p {
+    color: var(--soft);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-quiz {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.12em;
+    transition: 0.3s;
+}
+
+.btn-quiz:hover {
+    background: #8e1425;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1150px) {
+
+    .comunidade-grid {
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 18px;
+    }
+
+    .pagina-comunidade {
+        padding: 35px 22px 60px;
+    }
+
+    .layout-logado {
+        grid-template-columns: 215px minmax(0, 1fr);
+    }
+
+    .side-nav {
+        padding: 25px 12px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .header section {
+        padding: 5px 15px;
+    }
+
+    .nav {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .nav-acesso a {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .layout-logado {
+        grid-template-columns: 190px minmax(0, 1fr);
+    }
+
+    .comunidade-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-comunidade {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-quiz {
+        grid-column: span 2;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .header {
+        position: relative;
+    }
+
+    .header section {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .brand img {
+        width: 110px;
+        height: 45px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 15px;
+        font-size: 11px;
+    }
+
+    .nav-acesso {
+        display: none;
+    }
+
+    .layout-logado {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .side-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        height: auto;
+        padding: 10px;
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .perfil-side,
+    .side-titulo,
+    .side-footer {
+        display: none;
+    }
+
+    .side-menu {
+        display: flex;
+        gap: 5px;
+        margin: 0;
+        overflow-x: auto;
+    }
+
+    .side-link {
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 10px;
+        font-size: 16px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .side-link.ativo {
+        border-left: none;
+        border-bottom-color: var(--red);
+    }
+
+    .side-link span {
+        display: none;
+    }
+
+    .pagina-comunidade {
+        padding: 30px 15px 45px;
+    }
+
+    .titulo-comunidade {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .titulo-comunidade h1 {
+        font-size: 45px;
+    }
+
+    .painel-comunidade {
+        grid-template-columns: 1fr;
+    }
+
+    .card-quiz {
+        grid-column: auto;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .feed-filtros {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .acoes-publicacao {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .btn-publicar {
+        align-self: flex-end;
+    }
+
+    .campo-comentario {
+        flex-wrap: wrap;
+    }
+
+    .campo-comentario input {
+        flex-basis: 100%;
+    }
+
+    .card-comunidade {
+        padding: 16px;
+    }
+
+}

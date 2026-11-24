@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icon/umbrella.png">
+    <title>Resident Evil 4</title>
+
+
+
+    <link rel="stylesheet" href="./css/stylel1.css">
+    <link rel="stylesheet" href="./css/comunidade.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGAÇÃO PRINCIPAL -->
+
+    <header class="header">
+
+        <section>
+
+            <a href="./index.html#inicio" class="brand">
+                <img src="./assets/imgs/logo.png" alt="Logo Resident Evil">
+            </a>
+
+            <nav class="nav">
+                <a href="./index.html#history">História</a>
+                <a href="./index.html#personagem">Personagens</a>
+                <a href="./index.html#me">Sobre mim</a>
+                <a href="./comunidade.html" class="nav-ativo">Comunidade</a>
+            </nav>
+
+
+        </section>
+
+    </header>
+
+
+    <!-- ÁREA LOGADA -->
+
+    <div class="layout-logado">
+
+        <!-- SIDE NAV -->
+
+        <aside class="side-nav">
+
+            <div class="perfil-side">
+
+                <div class="avatar">U</div>
+
+                <div class="perfil-info">
+                    <h3 id="nomeUsuario">Nome do usuário</h3>
+                    <span>Sobrevivente</span>
+                </div>
+
+            </div>
+
+            <div class="side-menu">
+
+                <p class="side-titulo">ÁREA DO USUÁRIO</p>
+
+                <a href="./comunidade.html" class="side-link ativo">
+
+                    Comunidade
+                </a>
+
+                <a href="./quiz.html" class="side-link">
+
+                    Quiz
+                </a>
+
+                <a href="./dashboard.html" class="side-link">
+
+                    Dashboard
+                </a>
+
+            </div>
+
+            <div class="side-footer">
+                <a href="#sair">ENCERRAR SESSÃO ↗</a>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO DA PÁGINA -->
+
+        <main class="conteudo-logado">
+
+            <section class="pagina-comunidade" id="comunidade">
+
+                <!-- TÍTULO -->
+
+                <div class="titulo-comunidade">
+
+                    <div>
+                        <span class="eyebrow">ESPAÇO DOS SOBREVIVENTES</span>
+
+                        <h1>Comunidade</h1>
+
+                        <p>
+                            Compartilhe experiências, conheça outros jogadores
+                            e participe das discussões.
+                        </p>
+                    </div>
+
+
+
+                </div>
+
+
+                <!-- COLUNAS -->
+
+                <div class="comunidade-grid">
+
+                    <!-- FEED -->
+
+                    <section class="feed-comunidade">
+
+
+                        <!-- CRIAR PUBLICAÇÃO -->
+
+                        <article class="card-comunidade criar-publicacao">
+
+                            <div class="titulo-card">
+                                <h2>O que está acontecendo?</h2>
+                                <span>COMPARTILHE</span>
+                            </div>
+
+                            <div class="campo-publicacao">
+
+                                <div class="avatar">U</div>
+
+                                <textarea id="textoPublicacao"
+                                    placeholder="Compartilhe suas experiências com a comunidade..."></textarea>
+
+                            </div>
+
+                            <div class="acoes-publicacao">
+
+                                <span>Seja respeitoso com os outros sobreviventes.</span>
+
+                                <button class="btn-publicar" id="btnPublicar">
+                                    PUBLICAR
+                                </button>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- FILTROS -->
+
+                        <div class="feed-filtros">
+
+                            <h2>Discussões recentes</h2>
+
+                            <div>
+                                <button class="filtro ativo">Recentes</button>
+                                <button class="filtro">Populares</button>
+                            </div>
+
+                        </div>
+
+
+                        <!-- PUBLICAÇÃO 1 -->
+
+                        <article class="card-comunidade publicacao">
+
+                            <div class="usuario-publicacao">
+
+                                <div class="avatar">LK</div>
+
+                                <div>
+                                    <h3>Leon_K</h3>
+                                    <span>Há 2 horas · Gameplay</span>
+                                </div>
+
+                                <button class="opcoes">•••</button>
+
+                            </div>
+
+                            <div class="conteudo-publicacao">
+
+                                <h2>Qual foi o momento mais difícil do jogo?</h2>
+
+                                <p>
+                                    Na minha opinião, a parte do castelo foi uma
+                                    das mais desafiadoras de Resident Evil 4.
+                                    Principalmente pela quantidade de inimigos
+                                    e pela dificuldade de administrar os recursos.
+                                    Qual foi a experiência de vocês?
+                                </p>
+
+                            </div>
+
+                            <div class="tags-publicacao">
+                                <span>#RE4</span>
+                                <span>#Gameplay</span>
+                                <span>#Discussão</span>
+                            </div>
+
+                            <div class="interacoes-publicacao">
+
+                                <button>♡ <span>28 curtidas</span></button>
+                                <button>▤ <span>12 comentários</span></button>
+
+                            </div>
+
+
+                            <!-- COMENTÁRIOS -->
+
+                            <div class="comentarios-publicacao">
+
+                                <h4>Comentários</h4>
+
+                                <div class="comentario">
+
+                                    <div class="avatar">AD</div>
+
+                                    <div>
+                                        <h5>Ada_W</h5>
+
+                                        <p>
+                                            Para mim foi a parte da ilha!
+                                            Achei muito difícil na primeira vez.
+                                        </p>
+
+                                        <span>Há 1 hora</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="comentario">
+
+                                    <div class="avatar">LS</div>
+
+                                    <div>
+                                        <h5>Luis_S</h5>
+
+                                        <p>
+                                            O castelo também foi complicado,
+                                            principalmente na primeira partida.
+                                        </p>
+
+                                        <span>Há 30 minutos</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="campo-comentario">
+
+                                    <input type="text" placeholder="Escreva um comentário...">
+
+                                    <button>ENVIAR</button>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- PUBLICAÇÃO 2 -->
+
+                        <article class="card-comunidade publicacao">
+
+                            <div class="usuario-publicacao">
+
+                                <div class="avatar">AD</div>
+
+                                <div>
+                                    <h3>Ada_W</h3>
+                                    <span>Há 5 horas · Personagens</span>
+                                </div>
+
+                                <button class="opcoes">•••</button>
+
+                            </div>
+
+                            <div class="conteudo-publicacao">
+
+                                <h2>Qual personagem mais marcou sua jornada?</h2>
+
+                                <p>
+                                    Resident Evil 4 possui personagens muito
+                                    interessantes. Leon, Ashley, Ada e Luis
+                                    possuem participações importantes na história.
+                                    Quero saber qual deles é o favorito de vocês!
+                                </p>
+
+                            </div>
+
+                            <div class="tags-publicacao">
+                                <span>#Personagens</span>
+                                <span>#ResidentEvil</span>
+                            </div>
+
+                            <div class="interacoes-publicacao">
+
+                                <button>♡ <span>19 curtidas</span></button>
+                                <button>▤ <span>7 comentários</span></button>
+
+                            </div>
+
+                        </article>
+
+                    </section>
+
+
+                    <!-- PAINEL LATERAL -->
+
+                    <aside class="painel-comunidade">
+
+
+                        <!-- DESTAQUES -->
+
+                        <article class="card-comunidade">
+
+                            <div class="titulo-card">
+                                <h2>Em destaque</h2>
+                                <span>RANKING</span>
+                            </div>
+
+                            <div class="membro-ranking">
+
+                                <span class="posicao ouro">01</span>
+
+                                <div class="avatar">AD</div>
+
+                                <div class="membro-info">
+                                    <h3>Ada_W</h3>
+                                    <span>850 pontos</span>
+                                </div>
+
+                                <span class="trofeu">♛</span>
+
+                            </div>
+
+                            <div class="membro-ranking">
+
+                                <span class="posicao prata">02</span>
+
+                                <div class="avatar">LK</div>
+
+                                <div class="membro-info">
+                                    <h3>Leon_K</h3>
+                                    <span>720 pontos</span>
+                                </div>
+
+                            </div>
+
+                            <div class="membro-ranking">
+
+                                <span class="posicao bronze">03</span>
+
+                                <div class="avatar">LS</div>
+
+                                <div class="membro-info">
+                                    <h3>Luis_S</h3>
+                                    <span>610 pontos</span>
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- TÓPICOS -->
+
+                        <article class="card-comunidade">
+
+                            <div class="titulo-card">
+                                <h2>Tópicos populares</h2>
+                            </div>
+
+                            <div class="topico">
+                                <span># Armas</span>
+                                <small>32 publicações</small>
+                            </div>
+
+                            <div class="topico">
+                                <span># Personagens</span>
+                                <small>24 publicações</small>
+                            </div>
+
+                            <div class="topico">
+                                <span># Teorias</span>
+                                <small>18 publicações</small>
+                            </div>
+
+                            <div class="topico">
+                                <span># Gameplay</span>
+                                <small>15 publicações</small>
+                            </div>
+
+                        </article>
+
+
+                        <!-- QUIZ -->
+
+                        <article class="card-comunidade card-quiz">
+
+                            <span class="eyebrow">DESAFIO DA COMUNIDADE</span>
+
+                            <h2>Você conhece Resident Evil 4?</h2>
+
+                            <p>
+                                Teste seus conhecimentos e descubra
+                                sua posição entre os sobreviventes.
+                            </p>
+
+                            <a href="quiz.html" class="btn-quiz">
+                                ACESSAR QUIZ
+                            </a>
+
+                        </article>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+<script src="./js/usuario.js"></script>
+
+</html>

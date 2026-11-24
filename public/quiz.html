@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icon/umbrella.png">
+    <title>Resident Evil 4</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/quiz.css">
+    <link rel="stylesheet" href="./css/comunidade.css">
+    <link rel="stylesheet" href="./css/stylel1.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+
+    
+    <header class="header">
+
+        <section>
+
+            <a href="./index.html#inicio" class="brand">
+                <img src="./assets/imgs/logo.png" alt="Logo Resident Evil">
+            </a>
+
+            <nav class="nav">
+                <a href="./index.html#history">História</a>
+                <a href="./index.html#personagem">Personagens</a>
+                <a href="./index.html#me">Sobre mim</a>
+                <a href="./comunidade.html" class="nav-ativo">Comunidade</a>
+            </nav>
+
+
+        </section>
+
+    </header>
+
+    <div class="layout-logado">
+
+        <aside class="side-nav">
+
+            <div class="perfil-side">
+
+                <div class="avatar">U</div>
+
+                <div class="perfil-info">
+                    <h3 id="nomeUsuario">Nome do usuário</h3>
+                    <span>Sobrevivente</span>
+                </div>
+
+            </div>
+
+            <div class="side-menu">
+
+                <p class="side-titulo">ÁREA DO USUÁRIO</p>
+                
+                <a href="./comunidade.html" class="side-link ativo">
+
+                    Comunidade
+                </a>
+
+                <a href="./quiz.html" class="side-link">
+
+                    Quiz
+                </a>
+
+                <a href="./dashboard.html" class="side-link">
+
+                    Dashboard
+                </a>
+
+            </div>
+
+            <div class="side-footer">
+                <a href="#sair">ENCERRAR SESSÃO ↗</a>
+            </div>
+
+        </aside>
+
+<main class="conteudo-principal">
+    <section id="telaQuizzes">
+
+        <h1>QUIZZES</h1>
+        <p>Escolha um desafio e teste seus conhecimentos!</p>
+
+        
+<div class="container-quizzes">
+
+    <button class="card-quiz" onclick="selecionarQuiz('quiz1')">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggr6CSz122RtN_0GnOp8zyy8pihKMJCgKWuKl5KUAHZyfg6EFibp3e_YY6SvMDkYQFUOQAlQ3v3TQJGSCUuqNvNmNLbjD5FvLHSR-OUzBcTEX5KV3DNeeRWtEldT4AgR1uaCfDd0WlLCg/s1600/3683028aa637bb000c4cd5525711fee8983520e8.jpg" alt="Universo Resident Evil 4">
+        <div class="conteudo-card">
+            <h2>UNIVERSO RESIDENT EVIL 4</h2>
+            <p>Teste seus conhecimentos sobre a história, os acontecimentos e os mistérios do jogo.</p>
+        </div>
+    </button>
+
+    <button class="card-quiz" onclick="selecionarQuiz('quiz2')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9NFfflYqHwnTZp2KgvYPBWH4hl40aBQB3AwDwRTmNUEjt4DMiU6Ym9ozA&s=10" alt="Personagens de Resident Evil 4">
+        <div class="conteudo-card">
+            <h2>PERSONAGENS E SUAS HISTÓRIAS</h2>
+            <p>Descubra o quanto você conhece Leon, Ashley, Ada e os demais personagens.</p>
+        </div>
+    </button>
+
+    <button class="card-quiz" onclick="selecionarQuiz('quiz3')">
+        <img src="https://i.redd.it/8nh05ucnclkg1.jpeg" alt="Inimigos de Resident Evil 4">
+        <div class="conteudo-card">
+            <h2>INIMIGOS E CRIATURAS</h2>
+            <p>Conheça os inimigos, suas características e as ameaças que Leon enfrenta.</p>
+        </div>
+    </button>
+
+    <button class="card-quiz" onclick="selecionarQuiz('quiz4')">
+        <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2023/03/cenas_cafonas_resident_evil_no_remake__141a1g.jpg" alt="Cenários de Resident Evil 4">
+        <div class="conteudo-card">
+            <h2>CENÁRIOS E EXPLORAÇÃO</h2>
+            <p>Explore os territórios e relembre os detalhes dos ambientes do jogo.</p>
+        </div>
+    </button>
+
+    <button class="card-quiz" onclick="selecionarQuiz('quiz5')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgEkcx2buidaAN_rgxav1Ghu_ixu_kx0Tf5gAR6I1_5aItULrgCuWd-Dbb&s=10" alt="Combate e armas de Resident Evil 4">
+        <div class="conteudo-card">
+            <h2>ESTRATÉGIA E SOBREVIVÊNCIA</h2>
+            <p>Armas, equipamentos, recursos e decisões que fazem a diferença na sobrevivência.</p>
+        </div>
+    </button>
+
+</div>
+
+
+    </section>
+
+    <section id="telaPerguntas" style="display: none;">
+        <div class="app">
+            <h1>Quiz</h1>
+            <div class="quiz">
+                <h2 id="question">Question goes here</h2>
+                <div id="answerButtons">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+
+                </div>
+                <button id="next-btn">Next</button>
+                <button id="voltar-btn" style="display: none;" onclick="voltarQuizzes()">
+                    Voltar aos quizzes
+                </button>
+            </div>
+        </section>
+    </main>
+    </div>
+    <script src="./js/quiz.js"></script>
+</body>
+
+</html>

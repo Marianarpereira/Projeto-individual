@@ -1,0 +1,382 @@
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.conteudo-principal {
+    min-width: 0;
+    padding: 45px 24px 60px;
+    background: var(--bg);
+}
+
+
+/* =========================================
+   TELA DE SELEÇÃO DOS QUIZZES
+========================================= */
+
+#telaQuizzes {
+    width: 100%;
+    min-height: calc(100vh - 110px);
+    text-align: center;
+}
+
+/* TÍTULO */
+
+#telaQuizzes h1 {
+    color: var(--red);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+}
+
+/* DESCRIÇÃO */
+
+#telaQuizzes > p {
+    color: var(--ink);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   CONTAINER DOS CARDS
+========================================= */
+
+.container-quizzes {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 35px;
+}
+
+
+/* =========================================
+   CARDS DOS QUIZZES
+========================================= */
+
+.card-quiz {
+    width: 100%;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--surface);
+    border: 1px solid #70552c;
+
+    color: var(--ink);
+    text-align: left;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* IMAGENS */
+
+.card-quiz img {
+    width: 100%;
+    height: 230px;
+
+    display: block;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+/* CONTEÚDO INTERNO */
+
+.conteudo-card {
+    flex: 1;
+    padding: 25px 23px;
+}
+
+.conteudo-card h2 {
+    color: #c9963f;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+}
+
+.conteudo-card p {
+    color: var(--ink);
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.card-quiz:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.card-quiz:hover img {
+    transform: scale(1.04);
+}
+
+.card-quiz:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   TELA DE PERGUNTAS
+========================================= */
+
+#telaPerguntas {
+    width: 100%;
+    min-height: calc(100vh - 110px);
+}
+
+.app {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.app h1 {
+    color: var(--red);
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz h2 {
+    color: var(--ink);
+    font-family: "Oswald", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   ALTERNATIVAS
+========================================= */
+
+#answerButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#answerButtons .btn {
+    width: 100%;
+    padding: 17px 20px;
+
+    background: var(--surface2);
+    border: 1px solid var(--line);
+
+    color: var(--ink);
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    text-align: left;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#answerButtons .btn:hover:not(:disabled) {
+    background: #30251a;
+    border-color: var(--gold);
+}
+
+#answerButtons .btn:disabled {
+    cursor: default;
+}
+
+
+/* =========================================
+   BOTÕES DE NAVEGAÇÃO DO QUIZ
+========================================= */
+
+#next-btn{
+    padding: 13px 30px;
+    margin-top: 25px;
+
+    background: var(--red);
+    border: none;
+
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    transition: background 0.3s;
+
+}
+#voltar-btn {
+    padding: 13px 30px;
+    margin-top: 25px;
+
+    background: #c9963f;
+    border: none;
+
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* RESPOSTA CORRETA */
+
+#answerButtons .btn.correct {
+    background-color: #9aeabc;
+    border: 1px solid #4caf78;
+    color: #102c1b;
+}
+
+/* RESPOSTA INCORRETA */
+
+#answerButtons .btn.incorrect {
+    background-color: #ff9393;
+    border: 1px solid #d95757;
+    color: #3b1010;
+}
+
+#next-btn:hover,
+#voltar-btn:hover {
+    background: #8e1021;
+}
+
+
+/* =========================================
+   TELA DE RESULTADO DO QUIZ
+========================================= */
+
+.app.resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 45px 35px;
+    min-height: 440px;
+}
+
+/* TÍTULO */
+
+.app.resultado h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* PONTUAÇÃO */
+
+.app.resultado .quiz h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin: 15px 0 40px;
+    color: var(--ink);
+}
+
+/* BOTÕES */
+
+.app.resultado #next-btn,
+.app.resultado #voltar-btn {
+    display: block;
+    width: 250px;
+    margin: 15px auto 0;
+    padding: 16px 20px;
+    text-align: center;
+    font-size: 19px;
+}
+
+/* EFEITO DOS BOTÕES */
+
+.app.resultado #next-btn:hover,
+.app.resultado #voltar-btn:hover {
+    background-color: #8e1021;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .container-quizzes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    .conteudo-principal {
+        padding: 35px 20px;
+    }
+
+    .container-quizzes {
+        grid-template-columns: 1fr;
+    }
+
+    #telaQuizzes h1 {
+        font-size: 36px;
+    }
+
+    .app {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #telaQuizzes h1 {
+        font-size: 32px;
+    }
+
+    #telaQuizzes > p {
+        font-size: 16px;
+    }
+
+    .card-quiz img {
+        height: 200px;
+    }
+
+    .conteudo-card {
+        padding: 20px;
+    }
+
+    .app {
+        padding: 18px;
+    }
+
+    #next-btn,
+    #voltar-btn {
+        width: 100%;
+    }
+
+}
+
+

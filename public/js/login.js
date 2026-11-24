@@ -3,6 +3,8 @@ function logar() {
     let pegaUsuario = document.getElementById('usuario').value;
     let pegaSenha = document.getElementById('senha').value;
 
+    console.log('Antes do fetch');
+
     fetch('/usuarios/autenticar', {
         method: 'POST',
         headers: {
@@ -15,26 +17,25 @@ function logar() {
     })
     .then(function (resposta) {
 
-        if (resposta.ok) {
-            return resposta.json();
+        console.log('Fetch recebeu resposta:', resposta.status);
 
-        } else {
-            return resposta.text().then(function (mensagem) {
-                throw new Error(mensagem);
-            });
-        }
+        return resposta.json();
 
     })
     .then(function (usuario) {
 
-        alert('Login realizado com sucesso! Bem-vinda, ' + usuario.nome);
+        console.log('Dados recebidos:', usuario);
 
-        console.log(usuario);
+        sessionStorage.setItem('nomeUsuario', usuario.nome);
+        sessionStorage.setItem('idUsuario', usuario.id);
+
+        window.location.href = './comunidade.html';
 
     })
     .catch(function (erro) {
 
-        alert(erro.message);
+        console.log('ERRO NO FETCH:', erro);
+        alert('Erro na requisição: ' + erro.message);
 
     });
 

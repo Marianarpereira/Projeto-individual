@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,14 +18,17 @@ body {
     left: 0;
     right: 0;
     z-index: 99;
+    width: 100%;
+    margin: 0;
 }
 
 .header section {
-    background-color: transparent;
+    background: #16181a;
+    background: linear-gradient(360deg, rgba(22, 24, 26, 0.02) 0%, rgba(15, 20, 15, 1) 30%, rgba(0, 0, 0, 1) 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1500px;
+    max-width: none;
     margin: 0 auto;
     padding: 5px 25px;
 }
@@ -115,14 +119,12 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to right,
-        #000 0%,
-        #000 25%,
-        rgba(0, 0, 0, 0.85) 42%,
-        rgba(0, 0, 0, 0.2) 75%,
-        transparent 100%
-    );
+    background: linear-gradient(to right,
+            #000 0%,
+            #000 25%,
+            rgba(0, 0, 0, 0.85) 42%,
+            rgba(0, 0, 0, 0.2) 75%,
+            transparent 100%);
     z-index: 1;
 }
 
@@ -172,18 +174,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
 
 .personagens-banner::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.65)
-    );
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.65));
 }
 
 .banner-conteudo {
@@ -253,6 +253,7 @@ body {
     object-fit: cover;
     border-radius: 3px;
 }
+
 .personagem-info {
     display: flex;
     flex-direction: column;
@@ -383,7 +384,7 @@ body {
 .territorio-conteudo {
     padding: 20px;
 }
- 
+
 
 .territorio-conteudo h2 {
     font-family: 'Oswald', sans-serif;
@@ -431,7 +432,8 @@ body {
     padding: 0;
 
     display: flex;
-    align-items: center;       /* centro vertical */
+    align-items: center;
+    /* centro vertical */
     justify-content: center;
 
     background-color: #100D08;
@@ -448,7 +450,8 @@ body {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;       /* centro vertical das duas colunas */
+    align-items: center;
+    /* centro vertical das duas colunas */
     gap: 0;
 
     margin: 0;
@@ -538,7 +541,7 @@ body {
 }
 
 
-#about .sobre-imagem { 
+#about .sobre-imagem {
     grid-column: 2;
     width: 100%;
     display: flex;
@@ -600,4 +603,190 @@ body {
     #about .sobre-texto h1 {
         font-size: 27px;
     }
+}
+
+/* =================================
+   PÁGINA INICIAL | COMUNIDADE
+================================= */
+
+#comunidade {
+    width: 100%;
+    min-height: 100vh;
+    background: #050505;
+    padding: 30px 20px 60px;
+}
+
+#comunidade .container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* =================================
+   BANNER
+================================= */
+
+#comunidade .banner {
+    width: 100%;
+    min-height: 320px;
+    border-radius: 10px;
+    padding: 35px;
+
+    display: flex;
+    align-items: flex-end;
+
+    background-image:
+        linear-gradient(90deg,
+            rgba(5, 5, 5, 0.85),
+            rgba(5, 5, 5, 0.25)),
+        url("https://flowgames.gg/wp-content/uploads/2023/02/resident-evil-4-remake-story-trailer-gallery_qdqn.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#comunidade .banner-content {
+    max-width: 650px;
+}
+
+#comunidade .eyebrow {
+    color: #bf1f33;
+    font-family: "Bebas Neue";
+    font-size: 20px;
+    letter-spacing: 0.2em;
+    margin: 0 0 8px;
+}
+
+#comunidade .banner h1 {
+    color: #f4f1ee;
+    font-family: "Bebas Neue";
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: 0.05em;
+    margin: 0 0 14px;
+}
+
+#comunidade .banner-content>p:last-child {
+    color: #f0dede;
+    font-family: "Oswald", sans-serif;
+    font-size: 19px;
+    margin: 0;
+}
+
+/* =================================
+   SOBRE A COMUNIDADE
+================================= */
+
+#comunidade .about {
+    background: #121212;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 22px;
+}
+
+#comunidade .about h2 {
+    color: #c9963f;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    margin: 0 0 16px;
+}
+
+#comunidade .about>p {
+    color: #b9b4ae;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =================================
+   BOTÃO DE CADASTRO
+================================= */
+
+#comunidade .go {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#comunidade .go .btn {
+    display: inline-block;
+    padding: 8px 28px;
+    background: #bf1f33;
+    border: 1px solid #bf1f33;
+    border-radius: 2px;
+
+    color: #fff;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+
+    transition: background 0.3s;
+}
+
+#comunidade .go .btn:hover {
+    background: #8e1727;
+}
+
+#comunidade .go p {
+    color: #7d7872;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+#comunidade .go p a {
+    color: #f4f1ee;
+    text-decoration: underline;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 768px) {
+
+    #comunidade {
+        padding: 20px 15px 40px;
+    }
+
+    #comunidade .banner {
+        min-height: 280px;
+        padding: 24px;
+        background-position: center;
+    }
+
+    #comunidade .about {
+        padding: 22px;
+    }
+
+    #comunidade .about>p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    #comunidade .banner {
+        min-height: 250px;
+        padding: 18px;
+    }
+
+    #comunidade .banner h1 {
+        font-size: 42px;
+    }
+
+    #comunidade .links {
+        gap: 14px;
+    }
+
+    #comunidade .go .btn {
+        font-size: 16px;
+        padding: 8px 18px;
+    }
+
 }
