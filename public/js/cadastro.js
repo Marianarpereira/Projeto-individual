@@ -174,8 +174,7 @@ function cadastrar() {
         return resposta.text();
     })
     .then(function () {
-        alert('Cadastro realizado com sucesso!');
-        form.reset();
+        window.location.href = './login.html?cadastro=sucesso';
     })
     .catch(function (erro) {
         alert(erro.message);

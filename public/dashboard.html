@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/icon/umbrella.png">
     <title>Resident Evil 4</title>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-     <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/comunidade.css">
     <link rel="stylesheet" href="./css/stylel1.css">
-  
+
 </head>
+
 <body>
-     <header class="header">
+    <header class="header">
 
         <section>
 
@@ -40,7 +42,7 @@
 
             <div class="perfil-side">
 
-                <div class="avatar">U</div>
+           <img src="./assets/imgs/foto.jpg" alt="Foto de perfil" class="avatar foto-perfil">
 
                 <div class="perfil-info">
                     <h3 id="nomeUsuario">Nome do usuário</h3>
@@ -52,122 +54,113 @@
             <div class="side-menu">
 
                 <p class="side-titulo">ÁREA DO USUÁRIO</p>
-                
-                <a href="./comunidade.html" class="side-link ativo">
+
+                <a href="./comunidade.html" class="side-link">
 
                     Comunidade
                 </a>
 
-                <a href="#quiz" class="side-link">
+                <a href="./quiz.html" class="side-link">
 
                     Quiz
                 </a>
 
-                <a href="#dashboard" class="side-link">
+                <a href="dashboard.html" class="side-link ativo">
 
                     Dashboard
                 </a>
 
             </div>
-
             <div class="side-footer">
-                <a href="#sair">ENCERRAR SESSÃO ↗</a>
+                <a href="index.html" onclick="limparSessao()">ENCERRAR SESSÃO ↗</a>
             </div>
-
         </aside>
 
 
-<main class="conteudo-principal dashboard-main">
+        <main class="conteudo-principal dashboard-main">
 
-    <section class="dashboard">
+            <section class="dashboard">
 
-        <!-- CABEÇALHO DA DASHBOARD -->
+                <!-- CABEÇALHO DA DASHBOARD -->
 
-        <div class="dashboard-intro">
-            <div>
-                <span>ÁREA DO SOBREVIVENTE</span>
-                <h1>Olá, jogador!</h1>
-                <p>Acompanhe seu progresso no universo de Resident Evil 4.</p>
-            </div>
-        </div>
-
-
-        <!-- INDICADORES KPI -->
-
-        <section class="kpi-container">
-
-            <div class="kpi-card">
-                <span>QUIZZES CONCLUÍDOS</span>
-                <h2>12</h2>
-            </div>
-
-            <div class="kpi-card">
-                <span>PONTOS ACUMULADOS</span>
-                <h2>840</h2>
-            </div>
-
-            <div class="kpi-card">
-                <span>MÉDIA DE DESEMPENHO</span>
-                <h2>84%</h2>
-            </div>
-
-            <div class="kpi-card">
-                <span>MELHOR PONTUAÇÃO</span>
-                <h2>100%</h2>
-            </div>
-
-        </section>
-
-
-        <!-- GRÁFICO -->
-
-        <section class="grafico-container">
-
-            <div class="secao-titulo">
-                <h2>MEU DESEMPENHO POR QUIZ</h2>
-                <span>Desempenho médio</span>
-            </div>
-
-            <div class="grafico">
-                <canvas id="graficoDesempenho"></canvas>
-            </div>
-
-        </section>
-
-
-        <!-- ÚLTIMAS PONTUAÇÕES -->
-
-        <section class="pontuacoes-container">
-
-            <div class="secao-titulo">
-                <h2>ÚLTIMAS PONTUAÇÕES</h2>
-                <span>Seus resultados recentes</span>
-            </div>
-
-            <div class="pontuacoes-lista">
-
-                <div class="pontuacao-card">
-                    <span>PERSONAGENS</span>
-                    <h3>100 <small>PTS</small></h3>
+                <div class="dashboard-intro">
+                    <div class="dashboard-intro">
+                        <span class="subtitulo-dashboard">ÁREA DO SOBREVIVENTE</span>
+                        <h1>Olá, <span id="nomeJogador">jogador</span>!</h1>
+                    </div>
                 </div>
 
-                <div class="pontuacao-card">
-                    <span>UNIVERSO RE4</span>
-                    <h3>100 <small>PTS</small></h3>
-                </div>
 
-                <div class="pontuacao-card">
-                    <span>INIMIGOS</span>
-                    <h3>80 <small>PTS</small></h3>
-                </div>
+                <!-- INDICADORES KPI -->
 
-            </div>
+                <section class="kpi-container">
 
-        </section>
+                    <div class="kpi-card">
+                        <span>TENTATIVAS CONCLUÍDAS</span>
+                        <h2 id="quizzesConcluidos">0</h2>
+                    </div>
+
+                    <div class="kpi-card">
+                        <span>PONTOS ACUMULADOS</span>
+                        <h2 id="pontosAcumulados">0</h2>
+                    </div>
+
+                    <div class="kpi-card">
+                        <span>MÉDIA DE DESEMPENHO</span>
+                        <h2 id="mediaDesempenho">0%</h2>
+                    </div>
+
+                    <div class="kpi-card">
+                        <span>MELHOR PONTUAÇÃO</span>
+                        <h2 id="melhorPontuacao">0</h2>
+                    </div>
+
+                </section>
+
+
+                <!-- GRÁFICO -->
+
+                <section class="grafico-container">
+
+                    <div class="secao-titulo">
+                        <h2>MEU DESEMPENHO POR QUIZ</h2>
+                        <span>Desempenho médio</span>
+                    </div>
+
+                    <div class="grafico">
+                        <canvas id="graficoDesempenho"></canvas>
+                    </div>
+
+                </section>
+
+
+                <!-- ÚLTIMAS PONTUAÇÕES -->
+
+                <section class="pontuacoes-container">
+
+                    <div class="secao-titulo">
+                        <h2>ÚLTIMAS PONTUAÇÕES</h2>
+                        <span>Seus resultados recentes</span>
+                    </div>
+
+                    <div class="pontuacoes-lista" id="listaPontuacoes">
+
+                    </div>
+    </div>
 
     </section>
 
-</main>
+    </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/sessao.js"></script>
+    <script>
+        validarSessao();
+    </script>
+    <script src="./js/dashboard.js"></script>
 
 </body>
+
 </html>

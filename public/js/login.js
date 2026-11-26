@@ -1,3 +1,23 @@
+window.onload = function () {
+
+    const parametros = new URLSearchParams(window.location.search);
+
+    const cadastro = parametros.get('cadastro');
+
+    if (cadastro === 'sucesso') {
+
+        const mensagem = document.getElementById('mensagemCadastro');
+
+      mensagem.innerHTML = `
+    <strong>Cadastro concluído</strong>
+    Sua conta foi criada com sucesso. Agora, entre com seu e-mail e sua senha para acessar a comunidade.
+`;
+        mensagem.hidden = false;
+    }
+
+}
+
+
 function logar() {
 
     let pegaUsuario = document.getElementById('usuario').value;

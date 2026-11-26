@@ -51,7 +51,7 @@
 
             <div class="perfil-side">
 
-                <div class="avatar">U</div>
+              <img src="./assets/imgs/foto.jpg" alt="Foto de perfil" class="avatar foto-perfil">
 
                 <div class="perfil-info">
                     <h3 id="nomeUsuario">Nome do usuário</h3>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="side-footer">
-                <a href="#sair">ENCERRAR SESSÃO ↗</a>
+                <a href="index.html">ENCERRAR SESSÃO ↗</a>
             </div>
 
         </aside>
@@ -120,7 +120,7 @@
 
                     <!-- FEED -->
 
-                    <section class="feed-comunidade">
+                    <section class="feed-comunidade" id="listaPublicacoes">
 
 
                         <!-- CRIAR PUBLICAÇÃO -->
@@ -327,43 +327,46 @@
                                 <span>RANKING</span>
                             </div>
 
+                            <!-- 1º LUGAR -->
                             <div class="membro-ranking">
 
                                 <span class="posicao ouro">01</span>
 
-                                <div class="avatar">AD</div>
+                                <div class="avatar" id="avatar1">MA</div>
 
                                 <div class="membro-info">
-                                    <h3>Ada_W</h3>
-                                    <span>850 pontos</span>
+                                    <h3 id="nome1">Carregando...</h3>
+                                    <span id="pontos1">0 pontos</span>
                                 </div>
 
                                 <span class="trofeu">♛</span>
 
                             </div>
 
+                            <!-- 2º LUGAR -->
                             <div class="membro-ranking">
 
                                 <span class="posicao prata">02</span>
 
-                                <div class="avatar">LK</div>
+                                <div class="avatar" id="avatar2">DE</div>
 
                                 <div class="membro-info">
-                                    <h3>Leon_K</h3>
-                                    <span>720 pontos</span>
+                                    <h3 id="nome2">Carregando...</h3>
+                                    <span id="pontos2">0 pontos</span>
                                 </div>
 
                             </div>
 
+                            <!-- 3º LUGAR -->
                             <div class="membro-ranking">
 
                                 <span class="posicao bronze">03</span>
 
-                                <div class="avatar">LS</div>
+                                <div class="avatar" id="avatar3">LE</div>
 
                                 <div class="membro-info">
-                                    <h3>Luis_S</h3>
-                                    <span>610 pontos</span>
+                                    <h3 id="nome3">Carregando...</h3>
+                                    <span id="pontos3">0 pontos</span>
                                 </div>
 
                             </div>
@@ -432,6 +435,10 @@
     </div>
 
 </body>
-<script src="./js/usuario.js"></script>
+<script src="./js/sessao.js"></script>
+<script>
+    validarSessao();
+</script>
+<script src="./js/comunidade.js"></script>
 
 </html>

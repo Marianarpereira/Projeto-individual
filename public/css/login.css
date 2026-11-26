@@ -93,3 +93,28 @@ body {
     width: 320px;
     padding: 15px;
 }
+
+.mensagem-cadastro {
+    width: 320px;
+    margin-bottom: 25px;
+    padding: 15px;
+
+    background-color: #151515;
+    border: 1px solid #b2172a;
+    border-left: 4px solid #b2172a;
+
+    color: #d1d1d1;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.mensagem-cadastro strong {
+    display: block;
+    color: #b2172a;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}

@@ -27,11 +27,17 @@
     flex-shrink: 0;
 }
 
-.dashboard-intro span {
+.dashboard-intro .subtitulo-dashboard {
     color: var(--red);
     font-family: "Bebas Neue", sans-serif;
     font-size: 14px;
     letter-spacing: 0.16em;
+}
+
+.dashboard-intro h1 span {
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
 }
 
 .dashboard-intro h1 {
@@ -40,12 +46,6 @@
     font-size: 34px;
     font-weight: 500;
     margin: 2px 0;
-}
-
-.dashboard-intro p {
-    color: var(--mute);
-    font-family: "Oswald", sans-serif;
-    font-size: 15px;
 }
 
 /* =========================================

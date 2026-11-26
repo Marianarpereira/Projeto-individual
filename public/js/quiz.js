@@ -251,8 +251,10 @@ const nextButton = document.getElementById("next-btn");
 let questionIndex = 0;
 let score = 0;
 let questions = [];
+let quizSelecionado = "";
 
 function selecionarQuiz(numeroQuiz) {
+    quizSelecionado = numeroQuiz;
 
     questions = quizzes[numeroQuiz];
 
@@ -344,13 +346,43 @@ function showScore() {
 
 }
 
+function registrarTentativa() {
+    fetch("http://localhost:3333/tentativa/registrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuario: Number(sessionStorage.getItem("idUsuario")),
+            codigoQuiz: quizSelecionado,
+            pontuacao: score
+        })
+    })
+    .then(async function (resposta) {
+        if (!resposta.ok) {
+        var erro = await resposta.text();
+    console.log("Erro retornado pela API:", erro);
+    throw new Error("Erro ao registrar tentativa");
+        }
+
+        return resposta.json();
+    })
+    .then(function (resultado) {
+        console.log("Tentativa registrada:", resultado);
+    })
+    .catch(function (erro) {
+        console.log("Erro ao registrar:", erro);
+    });
+}
+
 function handleNextButton() {
     questionIndex++;
     if (questionIndex < questions.length) {
         showQuestion();
 
     } else {
-        showScore();
+           showScore();
+    registrarTentativa();
     }
 }
 
